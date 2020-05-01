@@ -90,16 +90,15 @@ export const addDirections = (step) => dispatch =>{
 //makes a call to backend api and updates a recipe
 export const editRecipe = (userID, recipeID, recipe) => dispatch =>{
     
-    dispatch({type:POST_RECIPEHEADER_START});
+    dispatch({type:EDIT_RECIPES_START});
     axiosWithAuth()
     .put(`/users/${JSON.parse(localStorage.getItem('userID'))}/recipes/${recipeID}`, recipe)
     .then(res =>{
         dispatch({type:POST_RECIPEHEADER_SUCCESS, payload: res.data});
         console.log(res.data,'res data')
-        console.log(store.getState().recipesAndLoginReducer.recipeShape,"inRECIPEHEADERSUCCESS")
     })
     .catch(err =>{
-        dispatch({type:POST_RECIPEHEADER_FAILURE, payload: err})
+        dispatch({type:EDIT_RECIPEHEADER_FAILURE, payload: err})
     })
 }
 //makes a call to the backend api and deletes a recipe
