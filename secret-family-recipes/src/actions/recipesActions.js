@@ -16,9 +16,9 @@ export const POST_DIRECTIONS_START = 'POST_DIRECTIONS_START';
 export const POST_DIRECTIONS_SUCCESS = 'POST_DIRECTIONS_SUCCESS';
 
 
-export const EDIT_RECIPES_START = 'EDIT_RECIPES_START';
-export const EDIT_RECIPES_SUCCESS = 'EDIT_RECIPES_SUCCESS';
-export const EDIT_RECIPES_FAILURE = 'EDIT_RECIPES_FAILURE';
+export const EDIT_RECIPE_START = 'EDIT_RECIPE_START';
+export const EDIT_RECIPE_SUCCESS = 'EDIT_RECIPE_SUCCESS';
+export const EDIT_RECIPE_FAILURE = 'EDIT_RECIPE_FAILURE';
 
 export const DELETE_RECIPES_START = 'DELETE_RECIPES_START';
 export const DELETE_RECIPES_SUCCESS = 'DELETE_RECIPES_SUCCESS';
@@ -90,15 +90,15 @@ export const addDirections = (step) => dispatch =>{
 //makes a call to backend api and updates a recipe
 export const editRecipe = (userID, recipeID, recipe) => dispatch =>{
     
-    dispatch({type:EDIT_RECIPES_START});
+    dispatch({type:EDIT_RECIPE_START});
     axiosWithAuth()
     .put(`/users/${JSON.parse(localStorage.getItem('userID'))}/recipes/${recipeID}`, recipe)
     .then(res =>{
-        dispatch({type:POST_RECIPEHEADER_SUCCESS, payload: res.data});
+        dispatch({type:EDIT_RECIPE_SUCCESS, payload: res.data});
         console.log(res.data,'res data')
     })
     .catch(err =>{
-        dispatch({type:EDIT_RECIPEHEADER_FAILURE, payload: err})
+        dispatch({type:EDIT_RECIPE_FAILURE, payload: err})
     })
 }
 //makes a call to the backend api and deletes a recipe
