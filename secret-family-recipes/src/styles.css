@@ -1,0 +1,374 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Dawning of a New Day', cursive;
+  color: lightseagreen;
+  background: #DFCE9D;
+}
+h1 {
+  font-size: 10rem;
+  font-family: 'Akronim', cursive;
+  color: #E25822;
+}
+@media (max-width:800px) {
+  h1 {
+    font-size: 8rem;
+  }
+}
+@media (max-width:500px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+h2 {
+  font-size: 7rem;
+  font-family: 'Hanalei', cursive;
+}
+@media (max-width:800px) {
+  h2 {
+    font-size: 6rem;
+  }
+}
+@media (max-width:500px) {
+  h2 {
+    font-size: 5rem;
+  }
+}
+div {
+  font-size: 3.5rem;
+}
+@media (max-width:800px) {
+  div {
+    font-size: 3rem;
+  }
+}
+@media (max-width:500px) {
+  div {
+    font-size: 2.5rem;
+  }
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+label p {
+  color: red;
+  font-size: 17px;
+  margin: 0 0;
+}
+label div {
+  margin: 27px 0;
+}
+nav {
+  max-width: 100%;
+  font-size: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width:800px) {
+  nav {
+    font-size: 4rem;
+  }
+}
+@media (max-width:500px) {
+  nav {
+    font-size: 3rem;
+  }
+}
+nav section {
+  max-width: 50%;
+  margin: 2%;
+}
+nav section a {
+  text-decoration: none;
+}
+.btn {
+  background-color: #1799B5;
+  border-radius: 10%;
+  padding: 10%;
+  font-family: 'Akronim', cursive;
+  color: seashell;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transform: rotate(15deg);
+  margin: 5%;
+}
+@media (max-width:800px) {
+  .rside {
+    margin: 8%;
+    justify-content: center;
+    align-content: center;
+  }
+}
+@media (max-width:500px) {
+  .rside {
+    justify-content: center;
+    align-content: center;
+    margin: 10%;
+    transform: rotate(10deg);
+  }
+}
+.lside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform: rotate(-15deg);
+  margin: 5%;
+}
+@media (max-width:800px) {
+  .lside {
+    justify-content: center;
+    align-content: center;
+    margin: 12%;
+  }
+}
+@media (max-width:500px) {
+  .lside {
+    justify-content: center;
+    align-content: center;
+    margin: 15%;
+  }
+}
+.ncard {
+  background-color: lightcoral;
+  border-radius: 10%;
+  padding: 2%;
+  color: seashell;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+@media (max-width:800px) {
+  .ncard {
+    max-width: 65%;
+  }
+}
+@media (max-width:500px) {
+  .ncard {
+    max-width: 80%;
+  }
+}
+a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+a img {
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+}
+/* RecipeCard */
+.recipesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 1% 0;
+}
+.cardContainer img {
+  width: 80%;
+  height: 30vh;
+}
+.cardContainer h4 {
+  width: 80%;
+  text-align: left;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+}
+.ingredientsList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 80%;
+  height: 30vh;
+}
+.directionsList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  text-align: left;
+}
+ul li {
+  width: 25%;
+  text-align: start;
+  overflow-wrap: break-word;
+  margin-right: 0.1%;
+}
+.signUpContainer label {
+  width: 100%;
+}
+.signUpContainer input {
+  height: 3vh;
+  width: 10%;
+}
+@media (max-width:500px) {
+  .signUpContainer input {
+    width: 80%;
+  }
+}
+@media (max-width:500px) {
+  .signUpContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .signUpContainer h2 {
+    display: none;
+  }
+}
+.signUpInputs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.outerContainer {
+  display: flex;
+  justify-content: center;
+}
+.outerContainer section {
+  font-size: 3.5rem;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.outerContainer section p {
+  text-align: left;
+  width: 95%;
+}
+@media (max-width:500px) {
+  button {
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+}

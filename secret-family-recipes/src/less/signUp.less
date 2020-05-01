@@ -1,0 +1,55 @@
+.signUpContainer{
+    label{
+        width: 100%;
+    }
+    input{
+        height: 3vh;
+        width: 10%;
+
+        @media @mobile{
+            width:80%
+        }
+    }
+
+    @media @mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        h2{
+            display:none;
+        }
+
+    }
+}
+.signUpInputs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.outerContainer{
+    display:flex;
+    justify-content: center;
+    section{
+        font-size: 3.5rem;
+        width:75%;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p{
+            text-align: left;
+            width: 95%;
+        }
+    }
+}
+
+@media @mobile{
+    button{
+        width:20%;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    
+}
