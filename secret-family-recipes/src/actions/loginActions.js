@@ -15,6 +15,7 @@ export const postLogin = (credentials, match) => dispatch =>{
     .then(res =>{
         dispatch({type:POST_LOGIN_SUCCESS, payload: res.data});
         localStorage.setItem('token', JSON.stringify(res.data.token));
+        localStorage.setItem('userID', JSON.stringify(res.data.loggedUser.id));
         match.push(`/recipes`)
     })
     .catch(err =>{

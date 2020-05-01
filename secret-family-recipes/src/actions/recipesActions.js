@@ -30,7 +30,7 @@ export const getRecipes = (userID) => dispatch =>{
     
     dispatch({type:GET_RECIPES_START});
     axiosWithAuth()
-    .get(`/users/${userID}/recipes`)
+    .get(`/users/${JSON.parse(localStorage.getItem('userID'))}/recipes`)
     .then(res =>{
         dispatch({type:GET_RECIPES_SUCCESS, payload: res.data});
         console.log(res.data,'get recipes res data')

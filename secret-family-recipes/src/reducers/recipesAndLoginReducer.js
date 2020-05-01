@@ -43,7 +43,7 @@ export const recipesAndLoginReducer = (state = initialState, action) => {
   switch (action.type) {
     case POST_LOGIN_START:
       console.log('POST_LOGIN_START')
-      return { ...state, isPosting: true }
+      return { ...state, isPosting: true, recipes:[] }
     case POST_LOGIN_SUCCESS:
       console.log('POST_LOGIN_SUCCESS')
       return { ...state, isPosting: false, recipeShape: { ...state.recipeShape, user_id: action.payload.loggedUser.id, username: action.payload.loggedUser.username }, error: "" }
