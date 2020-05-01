@@ -60,7 +60,7 @@ export const getRecipes = (userID) => dispatch =>{
 export const addRecipeHeader = (userID,recipe) => dispatch =>{
     dispatch({type:POST_RECIPEHEADER_START})
     axiosWithAuth()
-    .post(`/users/${userID}/recipes`, recipe)
+    .post(`/users/${JSON.parse(localStorage.getItem('userID'))}/recipes`, recipe)
     .then(res =>{
         dispatch({type:POST_RECIPEHEADER_SUCCESS, payload: res.data});
         console.log(res.data,'add recipes res data')             
@@ -92,7 +92,7 @@ export const editRecipe = (userID, recipeID, recipe) => dispatch =>{
     
     dispatch({type:POST_RECIPEHEADER_START});
     axiosWithAuth()
-    .put(`/users/${userID}/recipes/${recipeID}`, recipe)
+    .put(`/users/${JSON.parse(localStorage.getItem('userID'))}/recipes/${recipeID}`, recipe)
     .then(res =>{
         dispatch({type:POST_RECIPEHEADER_SUCCESS, payload: res.data});
         console.log(res.data,'res data')
@@ -107,7 +107,7 @@ export const deleteRecipe = (userID, recipeID) => dispatch =>{
     
     dispatch({type:DELETE_RECIPES_START});
     axiosWithAuth()
-    .delete(`/users/${userID}/recipes/${recipeID}`)
+    .delete(`/users/${JSON.parse(localStorage.getItem('userID'))}/recipes/${recipeID}`)
     .then(res =>{
         dispatch({type:DELETE_RECIPES_SUCCESS, payload: res.data});
         console.log(res.data,'res data')
