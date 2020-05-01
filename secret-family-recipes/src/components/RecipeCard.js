@@ -72,7 +72,10 @@ export default function RecipeCard(props){
                 
             
             <div>
-                <button onClick={() => props.deleteRecipe(props.userID, recipe.id)}> Delete</button>
+                <button onClick={() => {
+                    props.deleteRecipe(props.userID, recipe.id)
+                    window.location.reload()
+                    }}> Delete</button>
                 <button onClick={() => setEdit(!edit)}> Edit</button>
             </div>
         </div>:

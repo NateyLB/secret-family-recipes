@@ -96,6 +96,8 @@ export const editRecipe = (userID, recipeID, recipe) => dispatch =>{
     .then(res =>{
         dispatch({type:EDIT_RECIPE_SUCCESS, payload: res.data});
         console.log(res.data,'res data')
+        window.location.reload()
+
     })
     .catch(err =>{
         dispatch({type:EDIT_RECIPE_FAILURE, payload: err})
